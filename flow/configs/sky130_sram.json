@@ -1,0 +1,35 @@
+{
+    "DESIGN_NAME": "AcceleratorTop",
+    "VERILOG_FILES": "dir::AcceleratorTop.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10,
+    "SYNTH_PARAMETERS": [
+        "ROWS=4",
+        "COLS=4",
+        "DATA_WIDTH=16",
+        "ACC_WIDTH=32",
+        "ADDR_WIDTH=8",
+        "MEM_BACKEND=1"
+    ],
+    "FP_SIZING": "absolute",
+    "DIE_AREA": [0, 0, 1540, 1375],
+    "PDN_MACRO_CONNECTIONS": [
+        "buffer_.* VPWR VGND vccd1 vssd1"
+    ],
+    "PL_TARGET_DENSITY": 0.5,
+    "PDK": "sky130A",
+    "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+    "MACROS": {
+        "sky130_sram_1kbyte_1rw1r_32x256_8": {
+            "gds": ["dir::../../vendor/sky130_sram/sky130_sram_1kbyte_1rw1r_32x256_8.gds"],
+            "lef": ["dir::../../vendor/sky130_sram/sky130_sram_1kbyte_1rw1r_32x256_8.lef"],
+            "lib": {"*": ["dir::../../vendor/sky130_sram/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib"]},
+            "instances": {
+                "buffer_a.genblk1.gen_sky130.gen_memory_rows[0].gen_memory_row[0].mem_instance.mem_instance": {"location": [40, 40], "orientation": "N"},
+                "buffer_a.genblk1.gen_sky130.gen_memory_rows[0].gen_memory_row[1].mem_instance.mem_instance": {"location": [1019.78, 40], "orientation": "N"},
+                "buffer_b.genblk1.gen_sky130.gen_memory_rows[0].gen_memory_row[0].mem_instance.mem_instance": {"location": [40, 937.5], "orientation": "N"},
+                "buffer_b.genblk1.gen_sky130.gen_memory_rows[0].gen_memory_row[1].mem_instance.mem_instance": {"location": [1019.78, 937.5], "orientation": "N"}
+            }
+        }
+    }
+}
