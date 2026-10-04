@@ -35,6 +35,36 @@ Kazdy test buduje sie w osobnym katalogu (`sim_build_<nazwa>`), wiec mozna je
 uruchamiac jeden po drugim bez `make clean`.
 
 
+## Flow (synteza + PnR, sky130)
+
+Wymaga [Nix](https://nixos.org/download/).
+Przy pierwszym odpaleniu skrypt sam sklonuje OpenLane2, pobierze `sv2v` oraz
+(dla wariantu z SRAM) pliki makr pamieci z `VLSIDA/sky130_sram_macros`.
+
+```bash
+cd flow
+./build_sky130.sh
+```
+
+Backend pamieci (`MEM_BACKEND`) wybiera sie edytujac zmienna na poczatku
+[build_sky130.sh](flow/build_sky130.sh):
+
+| `MEM_BACKEND`  | Config                            | Opis                                  |
+|----------------|------------------------------------|----------------------------------------|
+| `GENERIC`      | `configs/sky130_generic.json`      | pamiec jako rejestry (bez hard macro) |
+| `SKY130_SRAM`  | `configs/sky130_sram.json`         | 4x hard macro `sky130_sram_1kbyte_1rw1r_32x256_8` |
+
+
+### Przegladanie wyniku w GUI OpenROAD
+
+```bash
+cd flow
+./gui.sh
+```
+
+Mozna tez w ``gui.sh`` ustawic corner.
+
+
 ## Pomysly:
 - podwojne buforowanie - ladujemy do bufora warstwe 2 w momencie kiedy liczy sie warstwa 1
 - 
