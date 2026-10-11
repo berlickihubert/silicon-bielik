@@ -1,0 +1,12 @@
+TOPLEVEL_LANG := verilog
+PYTHON_BIN    := $(abspath .venv/bin/python)
+export PYTHONPATH := $(PWD):$(PYTHONPATH)
+
+ifeq ($(SIM),verilator)
+    EXTRA_ARGS += $(foreach p,$(PARAMS),-G$(p)) --trace --trace-structs
+else ifeq ($(SIM),icarus)
+    COMPILE_ARGS += $(foreach p,$(PARAMS),-P$(TOPLEVEL).$(p))
+endif
+
+COCOTB_MAKEFILES_DIR := $(shell cocotb-config --makefiles)
+include $(COCOTB_MAKEFILES_DIR)/Makefile.sim

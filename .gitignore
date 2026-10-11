@@ -8,6 +8,7 @@
 
 !/src/
 !/src/**
+**/__pycache__/
 
 !/tests/
 !/tests/*.py

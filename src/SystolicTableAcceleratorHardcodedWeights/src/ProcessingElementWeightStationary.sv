@@ -1,6 +1,6 @@
 module ProcessingElementWeightStationary #(
     parameter int DATA_WIDTH = 8,
-    parameter int ACC_WIDTH = 32
+    parameter int ACC_WIDTH = 32,
 
     parameter logic signed [DATA_WIDTH-1:0] WEIGHT = '0
 )(
@@ -13,8 +13,6 @@ module ProcessingElementWeightStationary #(
     output logic signed [DATA_WIDTH-1:0] a_out,
     output logic signed [ACC_WIDTH-1:0]  partial_sum_out
 );
-
-    assign b_out = b_reg;
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
