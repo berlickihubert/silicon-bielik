@@ -1,3 +1,7 @@
+## Related repos:
+https://github.com/berlickihubert/SystolicTableAcceleratorHierarchical
+https://github.com/berlickihubert/SystolicTableAcceleratorWeightStationary
+
 ## Akceleratory
 
 Katalog `accelerators/` jest w tym repo pusty. Kazdy akcelerator to osobne repozytorium,
