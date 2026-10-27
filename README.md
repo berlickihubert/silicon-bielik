@@ -1,5 +1,5 @@
 ## Related repos:
-https://github.com/berlickihubert/SystolicTableAcceleratorHierarchical
+https://github.com/berlickihubert/AcceleratorHierarchicalHardcoded
 
 https://github.com/berlickihubert/SystolicTableAcceleratorWeightStationary
 
