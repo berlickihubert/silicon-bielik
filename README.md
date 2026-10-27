@@ -11,7 +11,7 @@ ktore trzeba sklonowac do tego katalogu:
 ```bash
 cd accelerators
 git clone https://github.com/berlickihubert/SystolicTableAcceleratorWeightStationary.git
-git clone https://github.com/berlickihubert/SystolicTableAcceleratorHierarchical.git
+git clone https://github.com/berlickihubert/AcceleratorHierarchicalHardcoded.git
 git clone https://github.com/berlickihubert/SystolicTableAcceleratorHardcodedWeights.git
 ```
 

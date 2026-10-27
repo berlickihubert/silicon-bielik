@@ -4,7 +4,7 @@
 
 WS_DIR := accelerators/SystolicTableAcceleratorWeightStationary
 HW_DIR := accelerators/SystolicTableAcceleratorHardcodedWeights
-HI_DIR := accelerators/SystolicTableAcceleratorHierarchical
+HI_DIR := accelerators/AcceleratorHierarchicalHardcoded
 
 .PHONY: test systolic_array compute_core accelerator_top accelerator_top_hardcoded accelerator_top_hierarchical
 
